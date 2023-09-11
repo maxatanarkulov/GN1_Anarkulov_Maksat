@@ -1,0 +1,121 @@
+.bestseller{
+    margin-top: 100px;
+}
+.bestseller-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bestseller-title h2{
+    font-size: 30px;
+    color: #0a472e;
+    font-weight: 400;
+    letter-spacing: -.75px;
+    position: relative;
+    margin-left: 30px;
+}
+.bestseller-title h2::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #eb3069;
+    border-radius: 100%;
+    left: -30px;
+    top: 4px;
+}
+.bestseller-card{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.bestseller-item{
+    width: calc(25% - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 30px;
+    border: 1px solid #e1e1e1;
+    border-radius: 30px;
+    position: relative;
+}
+.bestseller-item>img{
+    width: 100%;
+}
+.bestseller-item h3{
+    color: #e0bf96;
+    font-size: 18px;
+}
+.bestseller-item:hover .feature-line{
+    width: 100px;
+}
+.best-hidden{
+    display: flex;
+    position: absolute;
+    top: 60%;
+    opacity: 0;
+    transition: .4s;
+}
+.bestseller-item:hover .best-hidden{
+    top: 40%;
+    opacity: 1;
+
+}
+.best-hidden div{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e1e1e1;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    transition: .4s;
+}
+.best-hidden img{
+    transition: .4s;
+}
+.best-hidden div:hover{
+    background-color: #0a472e;
+}
+.best-hidden div img:hover{
+    filter: invert(1);
+}
+/* @media(max-width:1000px){
+    .feature-item{
+        width: calc(25% - 10px);
+        padding: 30px 15px;
+    }
+}
+@media(max-width:800px){
+    .feature-item:last-child{
+        display: none;
+    }
+    .feature-item{
+        width: calc(33.33% - 20px);
+    }
+}
+@media(max-width:550px){
+    .feature-header h2{
+        font-size: 20px;
+        margin: 0;
+    }
+    .feature-header::before{
+        display: none;
+    }
+    .feature-item:nth-child(3){
+        display: none;
+    }
+    .feature-item{
+        width: calc(50% - 20px);
+    }
+}
+@media(max-width:400px){
+    .feature-item:nth-child(2){
+        display: none;
+    }
+    .feature-item{
+        width: 100%;
+    }
+} */
